@@ -1,7 +1,7 @@
 <h1 align="center">My Guides</h1>
 
 <div align="center">
-    <img src="/assets/desk.gif" alt="desk" width="200"/>
+    <img src="/assets/desk.gif" alt="desk" width="400"/>
 </div>
 
 <h2 align="center">About</h2>
