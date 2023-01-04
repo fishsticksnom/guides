@@ -18,7 +18,7 @@ Reboot
 </div>
 
 <p align='center'> 
-  <img src="/assets/orangepizero2.png" alt="orange pi zero 2 image" width='200'>
+  <img src="./assets/orangepizero2.png" alt="orange pi zero 2 image" width='200'>
 </p>
 
 
