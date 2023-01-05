@@ -1,60 +1,60 @@
-<div align='ceter'>
-    <img src="./assets/terminal-logo.png" alt="teminal logo" />
+<div align='center'>
+    <img src="./assets/terminal-logo.png" alt="teminal logo" width="200"/>
 </div>
 
-<p>SSH (Secure Shell) keys are an access credential that is used in the SSH protocol and they 
+<p align="center">SSH (Secure Shell) keys are an access credential that is used in the SSH protocol and they 
 are foundational to modern Infrastructure-as-a-Service platforms such as AWS, Google Cloud, and Azure.</p>
 
 <h2 align='center'>Manage multiple ssh keys.</h2>
 
-<p>**Steps:**</p>
+**Steps:**
 
 1. Create ssh key using encryption ed25519.
 2. Save key inside the .ssh directory.
 3. Add a passphrase aka password.
 4. Copy key into your server.
 
-<h2>Create ssh key using encryption ed25519</h2>
+## Create ssh key using encryption ed25519
 
-<p>For this example I will create a ssh key for a Raspberry Pi.</p>
+**For this example I will create a ssh key for a Raspberry Pi.**
 
 ```bash
 ssh-keygen -t ed25519 -C "Raspberry Pi"
 ```
-<p>**Flags:**</p>
+**Flags:**
 
-<p>**-t**: Specifies the type of encryption.</p>
-<p>**-C**: Provides a new comment.</p>
+**-t**: Specifies the type of encryption.
 
-<h2>Save key inside the .ssh directory.</h2>
+**-C**: Provides a new comment.
 
-<p>You will be asked where you want to save the key, the path will be **/home/my_user_name/.ssh/raspberrypi_key**, I choose the name raspberrypi_key because is easy to identify.</p>
+## Save key inside the .ssh directory
+
+You will be asked where you want to save the key, the path will be **/home/my_user_name/.ssh/raspberrypi_key**, I choose the name raspberrypi_key because is easy to identify.
 
 ```bash
 /home/my_user_name_here/.ssh/raspberrypi_key
 ```
 
-<h2>Add a passphrase aka password.</h2>
+## Add a passphrase aka password
 
-<p>Add passphrase</p>
+Add a passphrase.
 
-<p>You will be ask for this passphrase every time you use the key.</p>
+You will be ask for this passphrase every time you use the key.
 
-<h2>Copy ssh key into server</h2>
+## Copy ssh key into server
 
 ```bash
 ssh-copy-id -i ~/.ssh/server_key.pub pi@ip_of_the_server
 ```
 
-<h2>Config file</h2>
+## Config file
 
-<h2>**Steps:**</h2>
+**Steps:**
 1. Create a config file.
 2. Add config info.
-3. Use the key
-4. Login
+4. Login using the key.
 
-<h2>Create a config file.</h2>
+## Create a config file
 
 ```bash
 cd .ssh/
@@ -62,9 +62,9 @@ touch config
 nano config
 ```
 
-<h2>Add config info </h2>
+## Add config info
 
-<p>In this file we will add the information neccessary for login to our Host</p>
+In this file we will add the information neccessary for login to our Host.
 
 ```bash
 Host raspberrypi
@@ -73,47 +73,48 @@ Host raspberrypi
     Port 22
     IdentityFile ~/.ssh/raspberrypi_key
 ```
-<p>Save file.</p>
+Save file.
 
 **Explanation:**
 
-<p>**Host:** this will be the name you will use to login.</p>
-<p>**HostName:** ip of the server.</p>
-<p>**User:** username on the server.</p>
-<p>**Port:** Port for connection.</p>
-<p>**IdentityFile:** raspberrypi_key path.</p>
+**Host:** this will be the name you will use to login.  
+**HostName:** ip of the server.  
+**User:** username on the server.  
+**Port:** Port for connection.  
+**IdentityFile:** raspberrypi_key path.  
 
-<h2>Login</h2>
+## Login uisng the key
 
-<p>Now is possible to login into the Raspberry pi using the raspberrypi_key.</p>
+Now is possible to login into the Raspberry pi using the raspberrypi_key.
 
 ```bash
 ssh raspberrypi
 ```
 
-<p>raspberrypi is the Host save on the config file.</p>
+raspberrypi is the Host save on the config file.
 
-<p>You can create multiple keys and manage them using the config file.</p>
+You can create multiple keys and manage them using the config file.
 
-<h2>Extras:</h2>
+## Extras:
 
-<p>For security reasons is recommended access the server only using ssh keys insted of passwords.</p>
+For security reasons is recommended access the server only using ssh keys insted of passwords.
 
-<p>Inside of your serve modify the file /etc/ssh/sshd_config</p>
+Inside of your server modify the file /etc/ssh/sshd_config
 
 ```bash
 nano /etc/ssh/ssh_config
 ```
 
-<p>Change this line.</p>
+Change this line.
 
 ```bash
 #PasswordAuthentication yes
 ```
-<p>For:</p>
+For:
 
 ```bash
-#PasswordAuthentication no
+PasswordAuthentication no
 ```
+Reboot and login again.
 
 <p>If you find this guide useful please give it a star and share.</p>
