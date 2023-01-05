@@ -1,8 +1,8 @@
 <h1 align="center">Orange Pi Zero 2 with Official Image</h1>
 
-<h2>About</h2>
+## About
 
-<p>This guide will help you to install the official image for your Orange Pi Zero 2, I guess it can be use for other models.</p>
+This guide will help you to install the official image for your Orange Pi Zero 2, I guess it can be use for other models.</p>
 
 
 ### Requirements:
@@ -22,18 +22,21 @@
 7. Update and Upgrade..  
 8. Activate Wifi.  
 9. Delete oranpi user
-<h2>Download the image from the website.</h2>
 
-<p>Go to the official <a href="http://www.orangepi.org/html/serviceAndSupport/index.html" target='_blank'></a>Orange Pi website, select your board.</p>
 
-<p>Select a distro, for this guide I will pick Debian, but feel free to select any other.</p>
+## Download the image from the website.
 
-**All the distros are save in google drive**
-<p>Pick a version, at this time I will download Orangepizero2_3.0.6_debian_bullseye_server_linux5.16.17, this version is the headless version. This will not have a desktop enviorment, if you like to use one with it, choose the xfce or the desktop version.</p>
+<p>Go to the official <a href="http://www.orangepi.org/html/serviceAndSupport/index.html" target='_blank'>Orange Pi </a>website, select your board.</p>
+
+Select a distro, for this guide I will pick Debian, but feel free to select any other.
+
+**All the distros are save in google drive.**
+
+Pick a version, at this time I will download Orangepizero2_3.0.6_debian_bullseye_server_linux5.16.17, this version is the headless version. This will not have a desktop enviorment, if you like to use one with it, choose the xfce or the desktop version.
 
 <h2>Download Raspberry Pi Imager</h2>
 
-<p>You can install this software using the terminal or downloading the app from the <a href="https://www.raspberrypi.com/software/">website</a>.</p>
+<p>You can install this software using the terminal or downloading the app from the <a href="https://www.raspberrypi.com/software/">Raspberry</a> website.</p>
 
 **Terminal:**
 
@@ -41,10 +44,12 @@
 sudo apt install rpi-imager
 ```
 
-<h2>Format SDCard and Add the Orange Pi image into the SDCard</h2>
-**Format SDCard**
+## Format SDCard and Add the Orange Pi image into the SDCard
 
-<img src="./assets/format.png" alt="format SDCard">
+**Format SDCard**
+<div align="center">
+<img src="./assets/format.png" alt="format SDCard" width="600"/>
+</div>
 
 1. Open Raspberry Pi Imager.
 2. Plug the SDCard.
@@ -55,7 +60,11 @@ sudo apt install rpi-imager
 7. Close app and open it again.
 
 **Add Image in to the SDCard**
-<img src="./assets/write_image.png" alt="write OrangePi image">
+
+<div align="center">
+<img src="./assets/write_image.png" alt="write OrangePi image" width="600"/>
+</div>
+
 1. Select Choose OS.
 2. Select Use custom.
 3. Select the OrangePi Image.
@@ -69,22 +78,27 @@ sudo apt install rpi-imager
 sudo rpi-imager
 ```
 
-<h2>Connect to the OrangePi using the ethernet connection and login using SSH.</h2>
-<p>Plug the SDCard into the Orange Pi, the ethernet cable, and for last the power source.</p>
+## Connect to the OrangePi using the ethernet connection and login using SSH.
+
+Plug the SDCard into the Orange Pi, the ethernet cable, and for last the power source.
+
 **The first boot takes time so be patient.**
 
 **Find the ip of the Orange Pi.**
 
-<p>You can do this using the terminal.</p>
+You can do this using the terminal.
 
 ```bash
 sudo apt install arp-scan
 sudo arp-scan --localnet
 ```
 
-<p>Or you can login into your router and look for it.</p>
-<p>Login using root and password:</p>
+Or you can login into your router and look for it.
+
+Login using root and password:
+
 user:root
+
 password: orangepi
 
 ```bash
@@ -93,14 +107,13 @@ ssh root@paste_the_ip_from_the_opi_here
 
 <h2>Change password</h2>
 
-<p>Add a new password.</p>
 ```bash
 passwd
 ```
 
-<h2>Change sources for downloading packages.</h2>
+## Change sources for downloading packages.
 
-<p>Change the source of the packages for downlaods, insted of using the repo from China we will use the official repo.</p>
+Change the source of the packages for downlaods, insted of using the repo from China we will use the official repo.
 
 ```bash
 nano /etc/apt/sources.list
@@ -120,72 +133,81 @@ deb http://deb.debian.org/debian bullseye-backports main contrib non-free
 deb http://security.debian.org/ bullseye-security main contrib non-free
 #deb-src http://security.debian.org/ bullseye-security main contrib non-free
 ```
-<p>Save the file.</p>
-<p>Reboot.</p>
+Save the file.
+
+**Reboot**
 
 ```bash
 reboot
 ```
-<p>Login using SSH using your new password.</p>
 
-<h2>Update and Upgrade.</h2>
+Login using SSH using your new password.
+
+## Update and Upgrade
 
 ```bash
 apt update
 apt upgrade
 ```
 
-<h2>Activate Wifi.</h2>
+## Activate Wifi.
+
+To activate the wifi, turn off the bluetooth, make a wifi access point, install IR support
+
 ```bash
 orangepi-config
 ```
 
+## Delete orange pi user
 
-<p>To activate the wifi, turn off the bluetooth, make a wifi access point, install IR support</p>
-
-<h2>Delete orange pi user</h2>
-
-<p>By default a orangepi user is created, to delete the this user use:</p>
+## By default a orangepi user is created, to delete the this user use:
 
 ```bash
 deluser --remove-all-files orange pi
 ```
 
 **Extras:**
-<p>Turn system off.</p>
+
+Turn system off.
 
 ```bash
 shutdown now
 ```
-<p>Reboot</p>
+Reboot
 
 ```bash
 reboot
 ```
-<p>Search for a package.</p>
+## Extras:
+
+Search for a package.
 
 ```bash
 apt search neofetch
 ```
 
-<p>Install packages.</p>
+Install packages.
 
 ```bash
 apt install neofetch
 ```
-<p>Delete packages.</p>
+
+Delete packages.
 
 ```bash
 apt purge neofetch
 ```
-<p>Check process.</p>
+
+Check process.
 
 ```bash
 htop
 ```
-<p>Add a new user.</p>
+
+Add a new user.
 
 ```bash
 useradd name_of_the_user_here
 ```
-<p>If you find this guide useful please give it a star and share.</p>
+
+If you find this guide useful please give it a star and share.
