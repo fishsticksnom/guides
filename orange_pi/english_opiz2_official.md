@@ -191,6 +191,12 @@ Add user to the sudo group.
 ```bash
 sudo usermod -aG sudo user_name_here
 ```
+Add password for user.
+
+```bash
+sudo -i passwd user_name_here
+```
+
 Switch user.
 ```bash
 su -p user_name_here
