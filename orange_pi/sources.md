@@ -1,6 +1,6 @@
 <h1 align="center">Change repositories from China</h1>
 
-<p align="center">**This is only required if you use the iso from the OrangePi website**</p>
+<p align="center">This is only required if you use the iso from the OrangePi website</p>
 
 ```bash
 nano etc/apt/sources.list
