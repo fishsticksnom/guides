@@ -1,3 +1,5 @@
+<h1 align='center'>Manage multiple ssh keys</h1>
+
 <div align='center'>
     <img src="./assets/terminal-logo.png" alt="teminal logo" width="200"/>
 </div>
@@ -5,7 +7,6 @@
 <p align="center">SSH (Secure Shell) keys are an access credential that is used in the SSH protocol and they 
 are foundational to modern Infrastructure-as-a-Service platforms such as AWS, Google Cloud, and Azure.</p>
 
-<h2 align='center'>Manage multiple ssh keys.</h2>
 
 **Steps:**
 
