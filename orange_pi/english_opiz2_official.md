@@ -163,7 +163,7 @@ orangepi-config
 ## By default a orangepi user is created, to delete the this user use:
 
 ```bash
-deluser --remove-all-files orange pi
+deluser --remove-all-files orangepi
 ```
 
 **Extras:**
