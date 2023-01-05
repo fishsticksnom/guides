@@ -103,8 +103,9 @@ For security reasons is recommended access the server only using ssh keys insted
 Inside of your server modify the file /etc/ssh/sshd_config
 
 ```bash
-nano /etc/ssh/ssh_config
+nano /etc/ssh/sshd_config
 ```
+This file is for the sshd daemon (the program that listens to any incoming connection request to the SSH port) on the host machine.
 
 Change this line.
 
