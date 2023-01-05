@@ -183,7 +183,7 @@ reboot
 Add a new user.
 
 ```bash
-useradd name_of_the_user_here
+useradd -m name_of_the_user_here
 ```
 
 Add user to the sudo group.
