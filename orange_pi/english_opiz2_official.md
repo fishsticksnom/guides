@@ -210,4 +210,10 @@ Add a new user.
 useradd name_of_the_user_here
 ```
 
+Add user to the sudo group.
+
+```bash
+sudo usermod -aG sudo user_name_here
+```
+
 If you find this guide useful please give it a star and share.
