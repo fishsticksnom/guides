@@ -182,6 +182,8 @@ reboot
 
 ## Extras:
 
+As a root:
+
 Add a new user.
 
 ```bash
@@ -191,17 +193,14 @@ useradd name_of_the_user_here
 Add user to the sudo group.
 
 ```bash
-sudo usermod -aG sudo user_name_here
+adduser user_name_here sudo
 ```
 
 Switch user.
+
 ```bash
-su -p user_name_here
+su user_name_here
 ```
-
-**Flags**
-
-**-p:** Preserve enviorment.
 
 Disable root.
 
