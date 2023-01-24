@@ -8,7 +8,7 @@ This guide is for the Orange Pi zero 2 and i2c oled 'SSD1306'.
 
 DO NOT CONNECT THE DISPLAY IF THE ORANGE PI IS ON.
 
-![OPIZ2 Pinout]('../assets/opiz2pinout.png')
+<img src="../assets/opiz2pinout.png" alt='orange pi zero 2 pinout' width='800'/>
 
 pin 6 = ground  
 pin 1 = vcc  
@@ -83,7 +83,7 @@ with canvas(device) as draw:
     font = ImageFont.load_default()
     # font = ImageFont.truetype('./fonts/' + bitmap_font, 16)
     # draw.rectangle((0, 0, device.width, device.height), outline=0, fill=0)
-    draw.text((0,  40), "fishstick snom", font=font, fill=255)
+    draw.text((0,  40), "fishstick nom", font=font, fill=255)
 ```
 
 Save and Run test.  
@@ -93,12 +93,12 @@ python3 oledtest.py
 ```
 
 ## Fonts
+<p>For more fonts <a href="http://www.dafont.com/bitmap.php">dafont</a> </p>
 
-For more fonts [bitmap]('http://www.dafont.com/bitmap.php')   
-Once you download it save them in the fonts folder.
+Once you download it save it in the fonts folder.
 
-##Special Thanks
+## Special Thanks
 
-Richard Hull for made this possible.
+Richard Hull and codelectron for made this possible.
 
 If you find this guide useful please give it a star and share.
