@@ -1,0 +1,104 @@
+<h1 align='center'>Oled SSD1306 i2c</h1>
+
+## About
+
+This guide is for the Orange Pi zero 2 and i2c oled 'SSD1306'.
+
+### Wiring the oled.
+
+DO NOT CONNECT THE DISPLAY IF THE ORANGE PI IS ON.
+
+![OPIZ2 Pinout]('../assets/opiz2pinout.png')
+
+pin 6 = ground  
+pin 1 = vcc  
+pin 3 = sda  
+pin 5 = sck  
+
+### Enable i2c pins.
+
+```bash
+sudo nano /boot/orangepiEnv.txt
+overlays=i2c3
+```
+
+### Add user to group i2c
+
+```bash
+sudo adduser your_username_here i2c
+```
+
+### Reboot
+
+```bash
+sudo reboot
+```
+
+### Update and Upgrade
+
+```bash
+sudo apt update
+sudo apt upgrade
+```
+
+### Install packages and dependencies.
+
+```bash
+sudo apt install i2c-tools python3-pip
+```
+
+```bash
+pip3 install pillow
+pip3 install smbus2
+```
+
+### Clone ssd1306 repository
+
+```bash
+git clone https://github.com/codelectron/ssd1306.git
+cd ssd1306
+sudo python3 setup.py install
+```
+
+### Test
+
+```bash
+cd examples/
+touch oledtest.py
+nano oledtest.py
+```
+
+Add this code.
+
+```python
+from oled.device import ssd1306, sh1106
+from oled.render import canvas
+from PIL import ImageFont, ImageDraw
+
+bitmap_font='C&C Red Alert [INET].ttf' # Font to use.
+
+device = ssd1306(port=3, address=0x3C) # substitute sh1106(...) below if using that device
+
+with canvas(device) as draw:
+    font = ImageFont.load_default()
+    # font = ImageFont.truetype('./fonts/' + bitmap_font, 16)
+    # draw.rectangle((0, 0, device.width, device.height), outline=0, fill=0)
+    draw.text((0,  40), "fishstick snom", font=font, fill=255)
+```
+
+Save and Run test.  
+
+```bash
+python3 oledtest.py
+```
+
+## Fonts
+
+For more fonts [bitmap]('http://www.dafont.com/bitmap.php')   
+Once you download it save them in the fonts folder.
+
+##Special Thanks
+
+Richard Hull for made this possible.
+
+If you find this guide useful please give it a star and share.
