@@ -2,24 +2,44 @@
 
 ## About
 
-This guide is for the Orange Pi zero 2 and i2c oled 'SSD1306'.
+This guide is for the Orange Pi zero 2 and Orange Pi 5.
 
 ### Wiring the oled.
 
 DO NOT CONNECT THE DISPLAY IF THE ORANGE PI IS ON.
 
+
 <img src="../assets/opiz2pinout.png" alt='orange pi zero 2 pinout' width='800'/>
 
-pin 6 = ground  
-pin 1 = vcc  
+
+ORANGE PI ZERO 2  
+
+GND pin 6  
+VCC pin 1  
 pin 3 = sda  
 pin 5 = sck  
 
-### Enable i2c pins.
+<img src="../assets/opi5pinout.png" alt='orange pi 5 pinout' width='800'/>
+
+ORANGE PI 5  
+
+GND pin 6  
+VCC pin 1  
+SDA pin 21  
+SCK pin 19  
+
+### ENABLE I2C PINS ORANGE PI ZERO 2
 
 ```bash
 sudo nano /boot/orangepiEnv.txt
 overlays=i2c3
+```
+
+### ENABLE I2C PINS ORANGE PI 5 
+
+```bash
+sudo nano /boot/orangepiEnv.txt
+overlays=i2c3-m0
 ```
 
 ### Add user to group i2c
