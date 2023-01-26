@@ -16,8 +16,8 @@ ORANGE PI ZERO 2
 
 GND pin 6  
 VCC pin 1  
-pin 3 = sda  
-pin 5 = sck  
+SDA pin 3  
+SCK pin 5  
 
 <img src="../assets/opi5pinout.png" alt='orange pi 5 pinout' width='800'/>
 
