@@ -19,6 +19,13 @@ VCC pin 1
 SDA pin 3  
 SCK pin 5  
 
+### ENABLE I2C PINS ORANGE PI ZERO 2
+
+```bash
+sudo nano /boot/orangepiEnv.txt
+overlays=i2c3
+```
+
 <img src="../assets/opi5pinout.png" alt='orange pi 5 pinout' width='800'/>
 
 ORANGE PI 5  
@@ -27,13 +34,6 @@ GND pin 6
 VCC pin 1  
 SDA pin 21  
 SCK pin 19  
-
-### ENABLE I2C PINS ORANGE PI ZERO 2
-
-```bash
-sudo nano /boot/orangepiEnv.txt
-overlays=i2c3
-```
 
 ### ENABLE I2C PINS ORANGE PI 5 
 
