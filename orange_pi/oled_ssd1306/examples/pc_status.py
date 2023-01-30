@@ -17,8 +17,13 @@ device = ssd1306(port=3, address=0x3C)
 while True:
     CPU = "CPU {:.1f}%".format(round(PS.cpu_percent(), 1))
 
+    # For orange pi zero 2
     temps = PS.sensors_temperatures()
     TEMP = "{:.1f} C".format(round(temps["cpu_thermal"][0].current, 1))
+
+    # For orange pi 5
+    # temps = PS.sensors_temperatures()
+    # TEMP = "{:.1f} C".format(round(temps["bigcore1_thermal"][0].current, 1))
 
     mem = PS.virtual_memory()
     MemUsage = "RAM {:5d}/{:5d} MB".format(
