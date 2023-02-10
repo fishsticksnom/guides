@@ -44,12 +44,9 @@ Pick a version, at this time I will download Orangepizero2_3.0.6_debian_bullseye
 sudo apt install rpi-imager
 ```
 
-## Format SDCard and Add the Orange Pi image into the SDCard
+## Format SDCard, and add image
 
 **Format SDCard**
-<div align="center">
-<img src="./assets/format.png" alt="format SDCard" width="600"/>
-</div>
 
 1. Open Raspberry Pi Imager.
 2. Plug the SDCard.
@@ -59,11 +56,15 @@ sudo apt install rpi-imager
 6. Select Write and Confirm.
 7. Close app and open it again.
 
-**Add Image in to the SDCard**
 
 <div align="center">
-<img src="./assets/write_image.png" alt="write OrangePi image" width="600"/>
+<img src="./assets/format.png" alt="format SDCard" width="400"/>
 </div>
+
+
+
+
+**Add Image in to the SDCard**
 
 1. Select Choose OS.
 2. Select Use custom.
@@ -71,6 +72,11 @@ sudo apt install rpi-imager
 4. Select Choose storage and select your SDCard.
 5. Select Write.
 6. Eject the SDCard safely.
+
+
+<div align="center">
+<img src="./assets/write_image.png" alt="write OrangePi image" width="400"/>
+</div>
 
 **If for some reason you have problems writing the image try to open the app with sudo.**
 
