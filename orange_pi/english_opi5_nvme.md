@@ -20,8 +20,8 @@ For this example I choose the Debian server from the official Orange pi website.
 1. Download Image
 1. Burn image in to the SDCard
 1. Plug NVMe into the Orange Pi 5
-1. Update the bootlader
-1. Erase NVMe
+1. Write Linux image to SPI Flash+NVMe SSD
+1. Empty NVMe
 1. Burn Image into the NVMe
 
 
@@ -40,15 +40,27 @@ So far I been using the raspberry pi imager without issues.
 sudo apt install rpi-imager
 ```
 
+Plug the SDCard
+
 ## Plug NVMe
 
 **BEFORE YOU PLUG IN THE NVME BE SURE THAT THE ORANGE PI 5 IS OFF AND WITHOUT THE POWER CORD.**
 
 Plug the NVMe at the bottom, I use 1 nylon screw and 3 nylon nuts to keep it secure.
 
-## Empty NVMe
+Once the SDCard and the NVMe are plug, turn on the Orange Pi 5
 
-Turn on the Orange Pi 5
+# Write Linux image to SPI Flash+NVMe SSD
+
+```bash
+sudo nand-sata-install
+```
+
+*Select number 7 Install/Update the bootlader on SPI Flash*
+
+Wait until you see **Done** on the lower left corner.
+
+## Empty NVMe
 
 ```bash
 sudo dd bs=1M if=/dev/zero of=/dev/nvme0n1 count=2000 status=progress
@@ -57,11 +69,11 @@ sudo sync
 
 ## Burn Image into NVMe
 
-You will to transfer the image that you donwload on step 1 into the Orange Pi.
+Now transfer the image that you donwload on step 1 into the Orange Pi.
 
 <p>
 
-To do this you can use a usb or add it using <a href="https://filezilla-project.org/">Filezilla</a></p>
+To do this you can use a usb, rsync, or add it using <a href="https://filezilla-project.org/">Filezilla</a></p>
 
 
 I choose to do it using a usb.
