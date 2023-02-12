@@ -4,7 +4,7 @@
 
 ## About
 
-This instructions will help you to make your opi5 boot from an NVMe instead of a SDCard.
+This instructions will help you to make your opi5 boot from an PCIE NVMe instead of a SDCard.
 
 Requirements.
 
@@ -16,7 +16,9 @@ Requirements.
 
 For this example I choose the Debian server from the official Orange pi website. 
 
+
 **Steps**
+
 1. Download Image
 1. Burn image in to the SDCard
 1. Plug NVMe into the Orange Pi 5
@@ -56,7 +58,8 @@ Once the SDCard and the NVMe are plug, turn on the Orange Pi 5
 sudo nand-sata-install
 ```
 
-*Select number 7 Install/Update the bootlader on SPI Flash*
+**Select number 7 Install/Update the bootlader on SPI Flash**
+
 
 Wait until you see **Done** on the lower left corner.
 
@@ -67,13 +70,14 @@ sudo dd bs=1M if=/dev/zero of=/dev/nvme0n1 count=2000 status=progress
 sudo sync
 ```
 
-## Burn Image into NVMe
+## Burn Image Into NVMe
+
 
 Now transfer the image that you donwload on step 1 into the Orange Pi.
 
 <p>
 
-To do this you can use a usb, rsync, or add it using <a href="https://filezilla-project.org/">Filezilla</a></p>
+To do this you can use a usb, rsync, or add it using <a href="https://filezilla-project.org/">Filezilla</a>.</p>
 
 
 I choose to do it using a usb.
@@ -114,7 +118,7 @@ cp /dev/sd1/your_image_goes_here.img /home/
 
 ## Copy image into the NVMe
 
-Locate where the image was copy in the last step.
+Locate where the image was copy in the last step and copy the image into the NVMe.
 
 
 ```bash
