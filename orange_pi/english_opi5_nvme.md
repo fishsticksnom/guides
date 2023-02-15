@@ -1,5 +1,5 @@
 <div align="center">
-<h1>Orange Pi 5 NVMe Instructions</h1>
+<h1>Orange Pi 5 NVMe Instructions For Debian and Ubuntu</h1>
 </div>
 
 ## About
