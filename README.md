@@ -1,7 +1,7 @@
 <h1 align="center">My Guides</h1>
 
 <div align="center">
-    <img src="/assets/desk.gif" alt="desk" width="400"/>
+<img src="/assets/desk.gif" alt="desk" width="400"/>
 </div>
 
 <h2 align="center">About</h2>
@@ -11,7 +11,7 @@
 <p align="center">I hope these guides can be helpful to you the same way they are to me.</p>
 
 <div align="center">
-    
+
 <a href="https://github.com/fishsticksnom/bspwm-config">Bspwm Config</a>
 
 <a href="https://github.com/fishsticksnom/kp3s_3d_touch_guide">Kp3s with 3D Touch And Marlin</a>
@@ -20,7 +20,7 @@
 
 <a href="https://github.com/fishsticksnom/orange_pi_guides">Orange Pi </a>
 
-    
+<a href="https://github.com/fishsticksnom/rsync_guide">Rsync</a>
 
 </div>
 
