@@ -14,7 +14,7 @@
     
 <a href="https://github.com/fishsticksnom/kp3s_3d_touch_guide">Kp3s with 3D Touch And Marlin</a>
 
-<a href="/ssh_keys/">Manage Multiple SSH Keys</a>  
+<a href="https://github.com/fishsticksnom/manage_multiple_ssh_keys_guide">Manage Multiple SSH Keys</a>  
 
 <a href="/orange_pi/">Orange Pi </a>
 
