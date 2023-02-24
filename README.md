@@ -12,6 +12,8 @@
 
 <div align="center">
     
+<a href="https://github.com/fishsticksnom/bspwm-config">Bspwm config</a>
+
 <a href="https://github.com/fishsticksnom/kp3s_3d_touch_guide">Kp3s with 3D Touch And Marlin</a>
 
 <a href="https://github.com/fishsticksnom/manage_multiple_ssh_keys_guide">Manage Multiple SSH Keys</a>  
