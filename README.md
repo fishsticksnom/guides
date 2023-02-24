@@ -16,7 +16,7 @@
 
 <a href="https://github.com/fishsticksnom/manage_multiple_ssh_keys_guide">Manage Multiple SSH Keys</a>  
 
-<a href="/orange_pi/">Orange Pi </a>
+<a href="https://github.com/fishsticksnom/orange_pi_guides">Orange Pi </a>
 
     
 
