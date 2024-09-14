@@ -11,6 +11,8 @@
 <p align="center">I hope these guides can be helpful to you the same way they are to me.</p>
 
 <div align="center">
+  
+<a href="https://github.com/fishsticksnom/cyd_template">CYD Template</a>  
 
 <a href="https://github.com/fishsticksnom/luks_encryption_guide">Encrypt Device Using LUKS</a>  
 
